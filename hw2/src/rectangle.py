@@ -21,9 +21,3 @@ class Rectangle(Figure):
     def area(self):
         area = self.A * self.B
         return area
-
-
-rectangle = Rectangle(10, 20)
-print(rectangle.area())
-print(rectangle.perimeter())
-print(rectangle.add_area(rectangle.area()))

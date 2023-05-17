@@ -17,9 +17,3 @@ class Circle(Figure):
     def area(self):
         area = math.pi * (self.R ** 2)
         return area
-
-
-circle = Circle(13)
-print(circle.area())
-print(circle.perimeter())
-print(circle.add_area(circle.area()))

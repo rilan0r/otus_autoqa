@@ -33,17 +33,3 @@ class Triangle(Figure):
 
     def type(self):
         return
-
-
-triangle = Triangle(3, 4, 5)
-triangle2 = Triangle(100, 120, 160)
-area1 = float(("{:.2f}".format(triangle.area())))
-perimeter1 = float(("{:.2f}".format(triangle.perimeter())))
-area2 = float(("{:.2f}".format(triangle2.area())))
-perimeter2 = float(("{:.2f}".format(triangle2.perimeter())))
-area_total = float(("{:.2f}".format(triangle.add_area(area2))))
-print(f"Area of 1st figure is {area1}")
-print(f"Area of 2nd figure is {area2}")
-print(f"Perimeter of 1st figure is {perimeter1}")
-print(f"Perimeter of 2nd figure is {perimeter2}")
-print(f"Total area of 2 figures is {area_total}")

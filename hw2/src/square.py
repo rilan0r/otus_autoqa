@@ -16,9 +16,3 @@ class Square(Figure):
     def area(self):
         area = self.A ** 2
         return area
-
-
-square = Square(10)
-print(square.area())
-print(square.perimeter())
-print(square.add_area(square.area()))
