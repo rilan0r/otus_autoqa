@@ -7,12 +7,12 @@ class Square(Figure):
             raise ValueError(f"{a} is not a digit")
         if a < 0:
             raise ValueError(f"{a} is lesser then 0")
-        self.A = a
+        self.a = a
 
     def perimeter(self):
-        perimeter = self.A * 4
+        perimeter = self.a * 4
         return perimeter
 
     def area(self):
-        area = self.A ** 2
+        area = self.a ** 2
         return area

@@ -11,13 +11,13 @@ class Rectangle(Figure):
             raise ValueError(f"{a} is lesser then 0")
         if b < 0:
             raise ValueError(f"{b} is lesser then 0")
-        self.A = a
-        self.B = b
+        self.a = a
+        self.b = b
 
     def perimeter(self):
-        perimeter = (self.A + self.B) * 2
+        perimeter = (self.a + self.b) * 2
         return perimeter
 
     def area(self):
-        area = self.A * self.B
+        area = self.a * self.b
         return area

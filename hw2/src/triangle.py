@@ -16,17 +16,25 @@ class Triangle(Figure):
             raise ValueError(f"{b} is lesser then 0")
         if c < 0:
             raise ValueError(f"{c} is lesser then 0")
-        self.A = a
-        self.B = b
-        self.C = c
+        self.a = a
+        self.b = b
+        self.c = c
         if (a + b < c) or (a + c < b) or (b + c < a):
             raise ValueError('Sorry, but such triangle is impossible')
 
     def perimeter(self):
-        perimeter = (self.A + self.B + self.C)
+        perimeter = (self.a + self.b + self.c)
         return perimeter
 
     def area(self):
-        perimeter = Triangle.perimeter(self)
-        area = math.sqrt(perimeter * (perimeter - self.A) * (perimeter - self.B) * (perimeter - self.C))
+        half_perimeter = self.perimeter() / 2
+        area = math.sqrt(half_perimeter * (half_perimeter - self.a) *
+                         (half_perimeter - self.b) * (half_perimeter - self.c))
         return area
+
+
+triangle = Triangle(3,4,5)
+triangle2 = Triangle(30, 40, 50)
+print(triangle.area())
+total_area = triangle.add_area(triangle2)
+print(total_area)
