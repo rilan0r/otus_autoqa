@@ -3,5 +3,5 @@ class Figure:
         pass
 
     def add_area(self, d):
-        added_area = self.area() + d
+        added_area = self.area() + d.area()
         return added_area

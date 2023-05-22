@@ -3,9 +3,9 @@ from hw2.figure import Figure
 
 class Rectangle(Figure):
     def __init__(self, a, b):
-        if not isinstance(a, float) and not isinstance(a, int):
+        if not isinstance(a, (float, int)):
             raise ValueError(f"{a} is not a digit")
-        if not isinstance(b, float) and not isinstance(b, int):
+        if not isinstance(b, (float, int)):
             raise ValueError(f"{b} is not a digit")
         if a < 0:
             raise ValueError(f"{a} is lesser then 0")

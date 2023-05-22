@@ -4,7 +4,7 @@ import math
 
 class Triangle(Figure):
     def __init__(self, a, b, c):
-        if not isinstance(a, float) and not isinstance(a, int):
+        if not isinstance(a, (float, int)):
             raise ValueError(f"{a} is not a digit")
         if not isinstance(b, float) and not isinstance(b, int):
             raise ValueError(f"{b} is not a digit")
@@ -30,6 +30,3 @@ class Triangle(Figure):
         perimeter = Triangle.perimeter(self)
         area = math.sqrt(perimeter * (perimeter - self.A) * (perimeter - self.B) * (perimeter - self.C))
         return area
-
-    def type(self):
-        return

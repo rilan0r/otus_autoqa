@@ -3,7 +3,7 @@ from hw2.figure import Figure
 
 class Square(Figure):
     def __init__(self, a):
-        if not isinstance(a, float) and not isinstance(a, int):
+        if not isinstance(a, (float, int)):
             raise ValueError(f"{a} is not a digit")
         if a < 0:
             raise ValueError(f"{a} is lesser then 0")
